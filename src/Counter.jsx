@@ -17,11 +17,13 @@ export default function Counter() {
 
     useEffect(() => {
         const countElement = document.getElementById('count');
-        let color = "white";
+        let color = "gray";
 
-        if (count < 10) color = "silver";
+        if(count >= 100) color = "green";
+        else if(count >= 50) color = "white";
+        else if (count >= 10) color = "silver";
 
-        countElement.color = color;
+        countElement.style.color = color;
 
         console.log(countElement, color);
 
